@@ -1,5 +1,4 @@
-'use client';
-
+import Link from 'next/link';
 import { MdOutlineShoppingBag } from 'react-icons/md';
 
 interface ViewCartProps {
@@ -8,9 +7,9 @@ interface ViewCartProps {
 
 export default function ViewCart({ itemAmount }: ViewCartProps) {
   return (
-    <button
+    <Link
+      href="/cart"
       className="flex items-center p-2 px-2 sm:px-4 border-2 border-black rounded-xl hover:border-zinc-700 hover:text-zinc-700 focus-visible:border-zinc-700 focus-visible::text-zinc-700 group transition-colors duration-500"
-      type="button"
     >
       <MdOutlineShoppingBag className="size-6" />
       <p className="hidden md:block md:mx-2 font-bold">View Cart</p>
@@ -22,6 +21,6 @@ export default function ViewCart({ itemAmount }: ViewCartProps) {
           </p>
         </div>
       )}
-    </button>
+    </Link>
   );
 }
