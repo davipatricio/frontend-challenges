@@ -10,7 +10,7 @@ export default function Button(props: ButtonProps) {
       {...props}
       type="button"
       className={clsx(
-        'bg-zinc-900 flex gap-3 items-center justify-center py-4 text-white w-full rounded-xl font-bold',
+        'bg-zinc-900 flex gap-3 items-center justify-center py-4 px-4 text-white w-full rounded-xl font-bold',
         props.className,
       )}
     >
