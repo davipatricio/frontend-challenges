@@ -14,26 +14,42 @@ const dmSans = DM_Sans({
 
 export default function FeaturedProduct() {
   return (
-    <div className="flex flex-col items-center gap-5 w-full bg-gray-200 py-10 px-5 text-center rounded-2xl">
-      <Image src={FeaturedProductImage} alt="Featured product" />
+    <section className="flex flex-col items-center gap-7 w-full bg-gray-200 py-10 px-5 text-center rounded-2xl md:grid md:grid-cols-2 md:gap-20 md:p-14 md:text-start">
+      <Image
+        className="m-auto md:hidden"
+        src={FeaturedProductImage}
+        alt="Featured product"
+      />
 
-      <div className={clsx('flex flex-col font-bold', dmSans.className)}>
-        <p className="text-4xl text-orange-600">25% OFF</p>
-        <p className="text-5xl">Summer Sale</p>
+      <div className="flex flex-col items-center gap-5 md:items-start">
+        <div
+          className={clsx('flex flex-col font-bold md:gap-2', dmSans.className)}
+        >
+          <p className="text-4xl text-orange-600">25% OFF</p>
+          <p className="text-5xl">Summer Sale</p>
+        </div>
+
+        <div>
+          <p className="text-gray-700 md:text-xl">
+            Discover our summer styles with discount
+          </p>
+        </div>
+
+        <Link href="/#drops" className="w-full md:mt-4 md:w-2/5">
+          <Button>
+            <p>Shop now</p>
+            <HiOutlineArrowRight className="text-xl" />
+          </Button>
+        </Link>
       </div>
 
-      <div>
-        <p className="text-gray-700">
-          Discover our summer styles with discount
-        </p>
+      <div className="hidden md:block max-h-80 h-full m-auto">
+        <Image
+          className="h-full w-full aspect-auto"
+          src={FeaturedProductImage}
+          alt="Featured product"
+        />
       </div>
-
-      <Link href="/#drops" className="w-full">
-        <Button>
-          <p>Shop now</p>
-          <HiOutlineArrowRight className="text-xl" />
-        </Button>
-      </Link>
-    </div>
+    </section>
   );
 }
