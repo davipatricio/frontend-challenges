@@ -26,7 +26,7 @@ export const ProductList = [
   },
   {
     brand: 'Nike',
-    name: 'Nike Air Force Premium',
+    name: 'Nike Air Force Premium 2',
     price: 98.23,
     image: Nike2,
   },
