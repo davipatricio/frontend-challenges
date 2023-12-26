@@ -2,7 +2,7 @@ import Image from 'next/image';
 import FeaturedProductImage from '@/app/assets/products/featured-product.png';
 import { DM_Sans } from 'next/font/google';
 import clsx from 'clsx';
-import Button from './button';
+import Button from '../button';
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import Link from 'next/link';
 
