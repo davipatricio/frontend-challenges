@@ -15,11 +15,7 @@ export default function Home() {
       <FeaturedProduct />
 
       <section className="mt-16" id="#drops">
-        <h1
-          className={clsx('text-2xl sm:text-3xl font-bold', dmSans.className)}
-        >
-          Explore our latest drops
-        </h1>
+        <h1 className={clsx('text-2xl sm:text-3xl font-bold', dmSans.className)}>Explore our latest drops</h1>
 
         <DropsCarousel />
       </section>
