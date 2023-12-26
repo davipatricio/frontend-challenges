@@ -1,7 +1,7 @@
-import { DM_Sans } from 'next/font/google';
-import FeaturedProduct from './components/hero/featured-product';
-import DropsCarousel from './components/hero/drops-carousel';
 import clsx from 'clsx';
+import { DM_Sans } from 'next/font/google';
+import DropsCarousel from './components/hero/drops-carousel';
+import FeaturedProduct from './components/hero/featured-product';
 
 const dmSans = DM_Sans({
   display: 'swap',

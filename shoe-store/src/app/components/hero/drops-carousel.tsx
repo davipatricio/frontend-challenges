@@ -1,11 +1,13 @@
 'use client';
 
 import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css';
+
+import ProductCard from './product-card';
+
+import { ProductList } from '@/app/data/products';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import 'keen-slider/keen-slider.min.css';
-import { ProductList } from '@/app/data/products';
-import ProductCard from './product-card';
 
 export default function DropsCarousel() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
