@@ -19,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx('antialiased scroll-smooth', inter.className)}>
+      <body className={clsx('antialiased scroll-smooth min-h-screen', inter.className)}>
         <Header />
-        <main className="px-3 sm:px-10 md:px-16 lg:px-20 xl:px-28">{children}</main>
+        <main className="px-3 sm:px-10 md:px-16 lg:px-20 xl:px-28 min-h-[calc(100vh-73px-109px)]">{children}</main>
         <Footer />
       </body>
     </html>
