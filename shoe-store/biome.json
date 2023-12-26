@@ -4,15 +4,21 @@
     "enabled": true
   },
   "formatter": {
-    "enabled": true,
-    "indentWidth": 2,
-    "indentStyle": "space",
-    "lineEnding": "lf"
+    "indentStyle": "space"
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "a11y": {
+        "recommended": true
+      },
+      "performance": {
+        "recommended": true
+      },
+      "nursery": {
+        "noUnusedImports": "error"
+      }
     }
   },
   "javascript": {
