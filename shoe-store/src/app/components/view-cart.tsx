@@ -1,11 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { MdOutlineShoppingBag } from 'react-icons/md';
+import { useCart } from '../hooks/useCart';
 
-interface ViewCartProps {
-  itemAmount: number;
-}
+export default function ViewCart() {
+  const cart = useCart();
 
-export default function ViewCart({ itemAmount }: ViewCartProps) {
   return (
     <Link
       href="/cart"
@@ -14,10 +15,10 @@ export default function ViewCart({ itemAmount }: ViewCartProps) {
       <MdOutlineShoppingBag className="size-6" />
       <p className="hidden md:block md:mx-2 font-bold">View Cart</p>
 
-      {itemAmount > 0 && (
+      {cart.items.length > 0 && (
         <div className="flex items-center justify-center rounded-full size-7 bg-orange-600 group-hover:bg-orange-700 group-focus-visible:bg-orange-700 ml-1">
           <p className="font-bold text-white text-sm leading-none group-hover:text-zinc-100 group-focus-visible:text-zinc-100">
-            {itemAmount}
+            {cart.items.length}
           </p>
         </div>
       )}
