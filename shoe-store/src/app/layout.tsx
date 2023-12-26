@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Header from './components/header';
 import './globals.css';
 import Footer from './components/footer';
+import clsx from 'clsx';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={clsx('antialiased scroll-smooth', inter.className)}>
         <Header />
         <main className="px-3 sm:px-10 md:px-16 lg:px-20 xl:px-28">{children}</main>
         <Footer />
