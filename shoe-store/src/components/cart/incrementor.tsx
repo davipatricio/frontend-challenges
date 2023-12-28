@@ -1,7 +1,7 @@
 'use client';
 
-import { ProductData } from '@/app/data/products';
-import { useCart } from '@/app/hooks/useCart';
+import { ProductData } from '@/data/products';
+import { useCart } from '@/hooks/useCart';
 import { useState } from 'react';
 
 interface IncrementorProps {
