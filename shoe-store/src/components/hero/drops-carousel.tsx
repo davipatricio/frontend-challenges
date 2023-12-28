@@ -5,7 +5,7 @@ import { useKeenSlider } from 'keen-slider/react';
 
 import ProductCard from './product-card';
 
-import { ProductList } from '@/app/data/products';
+import { ProductList } from '@/data/products';
 import { KeenSliderInstance } from 'keen-slider';
 import { useEffect, useState } from 'react';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';

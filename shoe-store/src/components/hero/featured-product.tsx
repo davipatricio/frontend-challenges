@@ -1,4 +1,4 @@
-import FeaturedProductImage from '@/app/assets/products/featured-product.png';
+import FeaturedProductImage from '@/assets/products/featured-product.png';
 import clsx from 'clsx';
 import { DM_Sans } from 'next/font/google';
 import Image from 'next/image';

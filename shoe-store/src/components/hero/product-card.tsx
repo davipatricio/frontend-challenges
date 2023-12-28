@@ -1,4 +1,4 @@
-import { ProductData } from '@/app/data/products';
+import { ProductData } from '@/data/products';
 import clsx from 'clsx';
 import { DM_Sans } from 'next/font/google';
 import Image from 'next/image';

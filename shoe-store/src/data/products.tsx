@@ -1,7 +1,7 @@
-import Adidas from '@/app/assets/products/adidas.png';
-import Nike from '@/app/assets/products/nike.png';
-import Nike2 from '@/app/assets/products/nike2.png';
-import Offwhite from '@/app/assets/products/offwhite.png';
+import Adidas from '@/assets/products/adidas.png';
+import Nike from '@/assets/products/nike.png';
+import Nike2 from '@/assets/products/nike2.png';
+import Offwhite from '@/assets/products/offwhite.png';
 import { StaticImageData } from 'next/image';
 
 export interface ProductData {

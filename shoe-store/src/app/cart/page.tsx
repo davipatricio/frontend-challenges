@@ -1,9 +1,9 @@
 'use client';
 
+import ProductCartCard from '@/components/cart/product-cart-card';
+import { useCart } from '@/hooks/useCart';
 import clsx from 'clsx';
 import { DM_Sans } from 'next/font/google';
-import ProductCartCard from '../components/cart/product-cart-card';
-import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
 
 const dmSans = DM_Sans({

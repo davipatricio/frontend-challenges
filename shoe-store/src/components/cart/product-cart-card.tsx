@@ -14,7 +14,7 @@ const dmSans = DM_Sans({
 export default function ProductCartCard(product: ProductData) {
   return (
     <div className="flex flex-wrap gap-2 mt-4">
-      <Image src={product.image} alt={product.name} className='min-w-24 max-h-60 h-auto w-auto sm:max-w-48' />
+      <Image src={product.image} alt={product.name} className="min-w-24 max-h-60 h-auto w-auto sm:max-w-48" />
       <div className="flex flex-col p-2 w-full max-w-96">
         <div className={clsx('flex justify-between flex-wrap text-zinc-900', dmSans.className)}>
           <p className="font-bold text-xl">{product.brand}</p>

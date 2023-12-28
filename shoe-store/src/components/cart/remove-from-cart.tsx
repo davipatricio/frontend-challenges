@@ -14,7 +14,12 @@ export default function RemoveFromCart({ product }: RemoveFromCartProps) {
   const handleDelete = () => cart.removeFromCart(product);
 
   return (
-    <button type="button" className="text-red-900 font-bold text-lg" onClick={handleDelete} aria-label="Remove this item from cart">
+    <button
+      type="button"
+      className="text-red-900 font-bold text-lg"
+      onClick={handleDelete}
+      aria-label="Remove this item from cart"
+    >
       <MdDelete className="text-xl" />
     </button>
   );

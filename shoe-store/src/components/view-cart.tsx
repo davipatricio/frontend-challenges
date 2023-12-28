@@ -1,9 +1,9 @@
 'use client';
 
+import { useCart } from '@/hooks/useCart';
 import Link from 'next/link';
-import { MdOutlineShoppingBag } from 'react-icons/md';
-import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
+import { MdOutlineShoppingBag } from 'react-icons/md';
 
 export default function ViewCart() {
   const cart = useCart();
