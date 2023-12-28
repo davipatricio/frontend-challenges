@@ -15,7 +15,7 @@ const dmSans = DM_Sans({
 export default function FeaturedProduct() {
   return (
     <section className="flex flex-col items-center gap-7 w-full bg-gray-200 py-10 px-5 text-center rounded-2xl md:p-10 md:grid md:grid-cols-2 md:gap-10 lg:gap-20 lg:p-14 md:text-start">
-      <Image className="m-auto md:hidden" src={FeaturedProductImage} alt="Featured product" />
+      <Image className="m-auto md:hidden" src={FeaturedProductImage} alt="Featured product" placeholder="blur" />
 
       <div className="flex flex-col items-center gap-5 md:items-start">
         <div className={clsx('flex flex-col font-bold md:gap-2', dmSans.className)}>
