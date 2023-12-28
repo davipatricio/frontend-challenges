@@ -3,9 +3,16 @@
 import Link from 'next/link';
 import { MdOutlineShoppingBag } from 'react-icons/md';
 import { useCart } from '../hooks/useCart';
+import { useEffect, useState } from 'react';
 
 export default function ViewCart() {
   const cart = useCart();
+  const [cartSize, setCartSize] = useState(0);
+
+  // Avoid hydration mismatch
+  useEffect(() => {
+    setCartSize(cart.items.length);
+  }, [cart]);
 
   return (
     <Link
@@ -15,10 +22,10 @@ export default function ViewCart() {
       <MdOutlineShoppingBag className="size-6" />
       <p className="hidden md:block md:mx-2 font-bold">View Cart</p>
 
-      {cart.items.length > 0 && (
-        <div className="flex items-center justify-center rounded-full size-7 bg-orange-600 group-hover:bg-orange-700 group-focus-visible:bg-orange-700 ml-1">
+      {cartSize > 0 && (
+        <div className="flex items-center justify-center rounded-full size-6 bg-orange-600 group-hover:bg-orange-700 group-focus-visible:bg-orange-700 ml-1">
           <p className="font-bold text-white text-sm leading-none group-hover:text-zinc-100 group-focus-visible:text-zinc-100">
-            {cart.items.length}
+            {cartSize}
           </p>
         </div>
       )}
