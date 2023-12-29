@@ -2,7 +2,7 @@
 
 This project is part of a front-end challenge to create a shoe store. Design by [@dotcards](https://www.figma.com/@dotcards). Available on [Figma](https://www.figma.com/community/file/1265518602582906441/frontend-challenge).
 
-A live version of this project is available at https://frontend-challenges-sandy.vercel.app/.
+A live version of this project is available at https://davipatricio-shoe-store.vercel.app/.
 
 ## Technologies
 
