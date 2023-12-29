@@ -16,7 +16,7 @@ export default function RemoveFromCart({ product }: RemoveFromCartProps) {
   return (
     <button
       type="button"
-      className="text-red-900 font-bold text-lg"
+      className="text-red-900 dark:text-red-500 font-bold text-lg"
       aria-label="Remove this item from cart"
       onClick={handleDelete}
     >

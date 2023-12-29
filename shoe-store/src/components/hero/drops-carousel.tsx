@@ -85,7 +85,7 @@ export default function DropsCarousel() {
 
       <div className="flex gap-3 mt-4">
         <button
-          className="text-4xl bg-zinc-200 rounded-full enabled:active:bg-zinc-400 enabled:active:text-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="text-4xl bg-zinc-200 dark:bg-zinc-600 rounded-full enabled:active:bg-zinc-400 enabled:active:text-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed"
           type="button"
           onClick={() => instanceRef.current?.prev()}
           disabled={currentSlide === 0}
@@ -94,7 +94,7 @@ export default function DropsCarousel() {
         </button>
 
         <button
-          className="text-4xl bg-zinc-200 rounded-full enabled:active:bg-zinc-400 enabled:active:text-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="text-4xl bg-zinc-200 dark:bg-zinc-600 rounded-full enabled:active:bg-zinc-400 enabled:active:text-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed"
           type="button"
           onClick={() => instanceRef.current?.next()}
           disabled={lastSlideVisible || everySlideVisible || currentSlide === ProductList.length - 1}

@@ -45,14 +45,14 @@ export default function ProductInfo({ product }: ImageSliderProps) {
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h1 className={clsx('font-bold text-2xl', dmSans.className)}>{product.brand}</h1>
-            <p className="text-gray-700 text-xl">{product.name}</p>
+            <p className="text-gray-700 dark:text-gray-200 text-xl">{product.name}</p>
           </div>
 
           <span className={clsx('font-medium text-2xl', dmSans.className)}>${product.price}</span>
         </div>
 
         {/* Divider */}
-        <div className="border-b border-gray-300 my-8 -mx-5 md:-mx-9" />
+        <div className="border-b border-gray-300 dark:border-gray-700 my-8 -mx-5 md:-mx-9" />
 
         {/* Buy product */}
         <div className="flex flex-col justify-between h-full">

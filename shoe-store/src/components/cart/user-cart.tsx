@@ -17,7 +17,7 @@ export default function UserCart() {
   return (
     <div className="mt-4">
       {cartSize === 0 ? (
-        <p className="text-xl text-gray-700">Your cart is empty.</p>
+        <p className="text-xl text-gray-700 dark:text-gray-300">Your cart is empty.</p>
       ) : (
         <div className="flex flex-col gap-4">
           {cart.items.map((item) => (
