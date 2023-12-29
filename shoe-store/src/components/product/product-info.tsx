@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import Button from '../button';
 import Incrementor from '../cart/incrementor';
 import { useState } from 'react';
+import { useCart } from '@/hooks/useCart';
 
 const dmSans = DM_Sans({
   display: 'swap',
@@ -17,6 +18,8 @@ export interface ImageSliderProps {
 }
 
 export default function ProductInfo({ product }: ImageSliderProps) {
+  const cart = useCart();
+  const alreadyOnCart = cart.items.some((item) => item.name === product.name);
   const [quantity, setQuantity] = useState(1);
 
   const onIncrement = () => {
@@ -27,7 +30,11 @@ export default function ProductInfo({ product }: ImageSliderProps) {
     setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : prevQuantity));
   };
 
-  return (  
+  const handleAddToCart = () => {
+    cart.addToCart(product, quantity);
+  };
+
+  return (
     <div className="grid sm:grid-cols-2 gap-10 w-full">
       <div>
         <Image className="max-w-2xl w-full" src={product.image} alt="product" />
@@ -54,8 +61,12 @@ export default function ProductInfo({ product }: ImageSliderProps) {
             <Incrementor onDecrement={onDecrement} onIncrement={onIncrement} quantity={quantity} />
           </div>
 
-          <Button className="mt-10">
-            <span className="font-bold text-lg">Add to Cart</span>
+          <Button className="mt-10" onClick={handleAddToCart} disabled={alreadyOnCart}>
+            {alreadyOnCart ? (
+              <span className="font-bold text-lg">Already on Cart</span>
+            ) : (
+              <span className="font-bold text-lg">Add to Cart</span>
+            )}
           </Button>
         </div>
       </div>
