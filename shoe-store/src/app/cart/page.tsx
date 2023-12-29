@@ -24,10 +24,10 @@ export default function Home() {
 
   return (
     <>
-      <p className={clsx('text-4xl font-bold', dmSans.className)}>Your Bag</p>
+      <p className={clsx('text-4xl font-bold', dmSans.className)}>Your Cart</p>
 
       {cartSize === 0 ? (
-        <p className="text-xl text-gray-700">Your bag is empty</p>
+        <p className="text-xl text-gray-700 mt-4">Your cart is empty.</p>
       ) : (
         <div className="flex flex-col gap-4 mt-4">
           {cart.items.map((item) => {
